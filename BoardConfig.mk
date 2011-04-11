@@ -3,7 +3,7 @@ BOARD_USE_FROYO_LIBCAMERA := true
 BOARD_FIRST_CAMERA_FRONT_FACING := true
 
 # inherit from the proprietary version
--include vendor/nvidia/harmony/BoardConfigVendor.mk
+-include vendor/malata/harmony_gtablet/BoardConfigVendor.mk
 
 TARGET_BOARD_PLATFORM := tegra
 TARGET_CPU_ABI := armeabi-v7a
@@ -19,10 +19,11 @@ TARGET_DONT_SET_AUDIO_AAC_FORMAT := true
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 
 # custom recovery ui
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/nvidia/harmony/recovery/recovery_ui.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/malata/harmony_gtablet/recovery/recovery_ui.c
 
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := harmony
+TARGET_OTA_ASSERT_DEVICE := harmony,harmony_gtablet
 
 # Modem
 TARGET_NO_RADIOIMAGE := true
@@ -49,12 +50,12 @@ BOARD_PREBUILT_LIBAUDIO := true
 BOARD_USE_KINETO_COMPATIBILITY := true
 
 #USE FBREAD for fb0 reads to fix DDMS/Screenshots
-BOARD_SUPPORTS_GRALLOC_FB_READ := ../../../device/nvidia/harmony/gralloc.h
+BOARD_SUPPORTS_GRALLOC_FB_READ := ../../../device/malata/harmony_gtablet/gralloc.h
 
 # EGL config 
 TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
 BOARD_NO_RGBX_8888 := true
-BOARD_EGL_CFG := device/nvidia/harmony/egl.cfg
+BOARD_EGL_CFG := device/malata/harmony_gtablet/egl.cfg
 
 # fix this up by examining /proc/mtd on a running device
 # dev:    size   erasesize  name
@@ -77,7 +78,7 @@ BOARD_HAS_NO_MISC_PARTITION := true
 # Indicate that the board has an Internal SD Card
 BOARD_HAS_SDCARD_INTERNAL := true
 
-TARGET_PREBUILT_KERNEL := device/nvidia/harmony/kernel
+TARGET_PREBUILT_KERNEL := device/malata/harmony_gtablet/kernel
 
 # Below is a sample of how you can tweak the mount points using the board config.
 # This is for the Samsung Galaxy S.
